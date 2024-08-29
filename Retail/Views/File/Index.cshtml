@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Azure.Storage.Files.Shares.Models.ShareFileItem>
+
+@{
+    ViewBag.Title = "Files";
+}
+
+<h2>Files</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Is Directory</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@(item.IsDirectory ? "Yes" : "No")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Select file to upload</label>
+        <input type="file" name="file" id="file" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>

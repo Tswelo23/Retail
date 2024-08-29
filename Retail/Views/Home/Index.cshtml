@@ -1,0 +1,177 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Retail - Your Trusted Online Shopping Partner</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/Retail.styles.css">
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #000; /* Black background */
+            color: #fff;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+
+            .nav-link:hover {
+                color: #ccc !important; /* Light gray hover effect */
+            }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #333;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            background-image: url('path-to-your-hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+            .hero-section h1 {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-section p {
+                font-size: 1.25rem;
+                margin-bottom: 30px;
+            }
+
+            .hero-section .btn-primary {
+                background-color: #000;
+                border-color: #000;
+                padding: 10px 20px;
+            }
+
+                .hero-section .btn-primary:hover {
+                    background-color: #444;
+                    border-color: #444;
+                }
+
+        /* Challenges Section */
+        .challenges-section {
+            background-color: #f8f8f8;
+            padding: 50px 0;
+        }
+
+            .challenges-section h2 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .challenges-section .challenge {
+                margin-bottom: 30px;
+            }
+
+                .challenges-section .challenge h4 {
+                    color: #000;
+                }
+
+        /* Call to Action Section */
+        .cta-section {
+            background-color: #000;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+            .cta-section h2 {
+                margin-bottom: 20px;
+            }
+
+            .cta-section .btn-primary {
+                background-color: #fff;
+                color: #000;
+                padding: 10px 30px;
+                border-color: #fff;
+            }
+
+                .cta-section .btn-primary:hover {
+                    background-color: #ccc;
+                    border-color: #ccc;
+                }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #000; /* Black background */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            .footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .footer a:hover {
+                    color: #ccc; /* Light gray hover effect */
+                }
+    </style>
+</head>
+<body>
+
+  
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Transforming Your Shopping Experience</h1>
+            <p>ABC Retail is committed to delivering a seamless and reliable online shopping experience, powered by cutting-edge technology.</p>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="challenges-section">
+        <div class="container">
+            <h2>Our Challenges</h2>
+            <div class="row">
+                <div class="col-md-6 challenge">
+                    <h4>Outdated Infrastructure</h4>
+                    <p>Our aging on-premises infrastructure struggles to handle increasing transaction volumes during peak seasons, leading to operational inefficiencies.</p>
+                </div>
+                <div class="col-md-6 challenge">
+                    <h4>Storage Inefficiencies</h4>
+                    <p>Storing product images on network shared drives results in slow access times and inefficient use of storage resources.</p>
+                </div>
+                <div class="col-md-6 challenge">
+                    <h4>Message Queuing Challenges</h4>
+                    <p>Our legacy message queuing system lacks scalability and reliability, causing delays and errors in processing customer orders.</p>
+                </div>
+                <div class="col-md-6 challenge">
+                    <h4>Data Analytics Bottlenecks</h4>
+                    <p>Our current data analytics infrastructure is unable to efficiently process and analyze large volumes of diverse customer data, hindering our ability to personalize experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Us in Our Transformation Journey</h2>
+            <p>ABC Retail is committed to modernizing our infrastructure to enhance customer satisfaction and operational efficiency.</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 ABC Retail - All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

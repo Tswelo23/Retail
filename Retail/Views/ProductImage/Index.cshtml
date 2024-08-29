@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Azure.Storage.Blobs.Models.BlobItem>
+
+@{
+    ViewBag.Title = "Product Images";
+}
+
+<h2>Product Images</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var blob in Model)
+        {
+            <tr>
+                <td>@blob.Name</td>
+                <td>
+                    <a href="@Url.Action("Download", "ProductImage", new { name = blob.Name })" class="btn btn-primary">Download</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-action="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Upload Image</label>
+        <input type="file" name="file" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Upload</button>
+</form>

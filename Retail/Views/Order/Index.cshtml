@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Azure.Storage.Queues.Models.QueueMessage>
+
+@{
+    ViewBag.Title = "Order Processing Queue";
+}
+
+<h2>Order Processing Queue</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Message</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.MessageText</td>
+                <td>
+                    <a href="/Order/ProcessOrder?orderId=@message.MessageId" class="btn btn-primary">Process</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-action="ProcessOrder" method="post">
+    <div class="form-group">
+        <label for="orderId">Order ID</label>
+        <input type="text" name="orderId" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Add to Queue</button>
+</form>
